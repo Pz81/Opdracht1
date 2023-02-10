@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1 back to basics</title>
+  </head>
+  <body>
+    <script>
+      var myName = "Steven";
+      var myAge = 17;
+      var myHairColor = "HEEL Donker bruin";
+      var leeg = "";
+      var zeven_zeven = "7";
+      var nul = "0";
+      var myBirthyear = "2005";
+      var antwoord = myBirthyear / myAge;
+     
+      document.write("uitkomst van vraag 8.1: " + myAge + "<br>");
+      document.write("8.2" + " - " + myAge * myBirthyear + "<br>");
+      document.write("8.3" + " - " + myBirthyear / myAge + "<br>");
+      
+      document.write("8.5" + " - " + antwoord.toFixed(2) + "<br>");
+      document.write("8.6" + " - " + 2, 5 * 2, 5 + "<br>");
+      document.write("8.7" + " - " + Math.sin(Math.PI * 2 )+ "<br>");
+      document.write("8.8" + " - " + 12 / 0 + "<br>");
+      document.write("8.9" + " - " + myName * 2 + "<br>");
+      document.write("8.10" + " - " + myAge * 2 + 1 + "<br>");
+      document.write("8.11" + " - " + myAge * (2 + 1) + "<br>");
+      document.write("8.12" + " - " + myAge + 1 + "<br>");
+      document.write("8.13" + " - " + leeg * 1 + "<br>" + "<br>" + "<br>");
+
+      document.write("10" + "<br>");
+      document.write(
+        "tekst van vraag 10.1 " + "ik ben een 'brave' student" + "<br>"
+      );
+      document.write("tekst van vraag 10.2 " + myName + "<br>");
+      document.write("tekst van vraag 10.3 " + myName[0] + "<br>");
+      document.write("tekst van vraag 10.4 " + myName[3] + "<br>");
+      document.write("tekst van vraag 10.5 " + myName + " " + myName + "<br>");
+      document.write("tekst van vraag 10.6 " + myName + " " + myAge + "<br>");
+      document.write("tekst van vraag 10.7 " + myAge + " " + myAge + "<br>");
+      document.write(
+        "tekst van vraag 10.8 " + (myAge + myAge) + "<br>" + "<br>" + "<br>"
+      );
+      document.write("12" + "<br>");
+
+      let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      myArray.push(11);
+      myArray.reverse();
+      myArray.pop();
+      myArray.splice(5, 2);
+      document.write(myArray + "<br>");
+
+      var myArrayLength = myArray.length;
+      var newArray = [];
+      document.write(myArrayLength + "<br>" + "<br>");
+
+      for (var i = 0; i < myArrayLength; i++) {
+        if (i === 0) {
+          continue;
+        }
+
+        if (myArray[i] !== 3) {
+          if (myArray[i] === 7) {
+            newArray.push(myArray[i] * 2);
+          } else {
+            newArray.push(myArray[i]);
+          }
+        }
+      }
+      document.write(newArray + "<br>");
+
+     
+      newArray[2] = "x";
+      document.write(newArray + "<br>");
+      var number = myArray[3];
+      myArray[3] = number + "";
+      console.log(typeof myArray[3]);
+
+      document.write(newArray + "<br>" + "<br>");
+      var waarde1 = 5;
+      var waarde2 = 5;
+      function compareValues(waarde1, waarde2) {
+        if (waarde1 === waarde2) {
+          return "ja";
+        } else {
+          const nee = "nee";
+          return nee.repeat(10);
+        }
+      }
+
+      document.write(compareValues("6", 6) + "<br>");
+      document.write(compareValues("dit ben ik", myName) + "<br>");
+      document.write(compareValues(myName, myName));
+      document.write("<br>");
+      document.write(compareValues(waarde1, waarde2));
+      console.log(compareValues(waarde1, waarde2));
+
+      document.write("<br>" + "<br>");
+
+     
+
+      var huidigeDatum = new Date();
+      document.write(huidigeDatum.toLocaleDateString());
+
+      document.write("<br>" + "<br>");
+      const maand = new Date();
+      let month = maand.getMonth();
+      document.write(month + 1);
+      document.write("<br>" + "<br>");
+      const dag = new Date();
+      let day = dag.getDate();
+      document.write(day);
+    </script>
+  </body>
+</html>
